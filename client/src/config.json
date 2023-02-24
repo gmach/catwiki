@@ -1,0 +1,4 @@
+{
+  "REST_API": "http://localhost:3001/api",
+  "TOP_SEARCH_QTY": 10
+}
