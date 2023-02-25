@@ -50,12 +50,14 @@ export default function Home() {
     <>
       <div className="hero">
         <section className="heroTop">
-          <h1>Cat Wiki</h1>
-          <h3>Get to know more about your cat breed</h3>
           <form 
             className="searchContainer"
             onSubmit={handleSubmit}
           >
+            <div className="heroTitle">
+              <h1>Cat Wiki</h1>
+              <h3>Get to know more about your cat breed</h3>
+            </div>
             <input
               className='searchBox'
               aria-label="Search breeds"

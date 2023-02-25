@@ -19,7 +19,7 @@ export default function BreedDetails () {
     
   return (
     <>
-      <main className="breedDetails">
+      <main className="breedDetailsWrap">
         { breed && 
         <>
           <BreedDetailsHeroImage breedName={breed.name} breedId={breed.reference_image_id} />

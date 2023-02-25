@@ -7,7 +7,7 @@ export default function BreedsTopSearches({breedsSearched}) {
   }
 return (
   <>
-    <button className="searchedBreedsButton" onClick={showSearchedHits}>Most Searched Breeds</button>
+    <a className="searchedBreedsButton" onClick={showSearchedHits}>Most Searched Breeds</a>
     <div className="searchWrap" >
       <div className="searchHitsWrap">
       {

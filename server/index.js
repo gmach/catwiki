@@ -38,7 +38,8 @@ const initDB = async () => {
         breed.searchHits = 0
         breeds[breed.id] = breed
         db.breeds = breeds
-        console.log( ++countAdded + ' added breed ' + ' ' + breed.name)
+        countAdded += 1
+        console.log(countAdded + ' added breed ' + ' ' + breed.name)
       }
     }
   })
@@ -120,7 +121,7 @@ app.get('*', (req, res) => {
 // registers search breed for counting
 app.post("/api/search", async (req, res) => {
   const breedId = req.body.breedId
-  ++db.breeds[breedId].searchHits
+  db.breeds[breedId].searchHits += 1
   res.json(db.breeds)
 })
 
