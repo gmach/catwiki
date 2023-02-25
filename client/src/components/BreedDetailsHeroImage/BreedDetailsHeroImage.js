@@ -8,7 +8,7 @@ export default function BreedDetailsHeroImage({breedName, breedId}) {
       const image = await getImage(breedId);
       setImageUrl(image.url)
      })()
-  }, [])
+  }, [breedId])
 
   return (
     <figure className="breedDetailsImage">

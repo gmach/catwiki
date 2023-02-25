@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import BreedImages from "../BreedImages";
 import { getBreeds } from "../../services";
@@ -13,7 +13,7 @@ export default function BreedDetails () {
       const breeds = await getBreeds(breedId);
       setBreed(breeds[breedId])
      })()
-  }, [])
+  }, [location.pathname])
   if (!breed) 
     return null
     

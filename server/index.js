@@ -31,7 +31,7 @@ const initDB = async () => {
         try {
           results = (await axios.get(`${CAT_API}/images/${breed.reference_image_id}`)).data
         } catch (e) { // rate limited 
-          await (new Promise(resolve => setTimeout(resolve, 1000)))
+          await (new Promise(resolve => setTimeout(resolve, 10000)))
           results = (await axios(`${CAT_API}/images/${breed.reference_image_id}`)).data
         }
         breed.reference_image_url = results.url
